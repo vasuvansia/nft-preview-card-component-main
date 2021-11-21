@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+// Colors
+
+//# Primary
+
+$Softblue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+//#Neutral
+
+$VerydarkbluemainBG: hsl(217, 54%, 11%); //(mainBG);
+$VerydarkbluecardBG: hsl(216, 50%, 16%); //(cardBG);
+$Verydarkblueline: hsl(215, 32%, 27%); //(line);
+$White: hsl(0, 0%, 100%);
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    line-height: 25px;
+}
+body {
+    background-color: $VerydarkbluemainBG;
+    height: 100vh;
+    display: flex;
+    // align-content: center;
+    align-items: center;
+    // align-self: center;
+    justify-content: center;
+    flex-direction: column;
+}     
+
+p {
+    color: $Softblue;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.card {
+    border-radius: 10px;
+    max-width: 330px;
+    background-color: $VerydarkbluecardBG;
+
+    .wrapper {
+        padding: 25px;
+        .bigimg {
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 30px;
+            // background-image: url('../images/image-equilibrium.jpg');
+            background: url("../images/image-equilibrium.jpg");
+            // background:url('../images/image-equilibrium.jpg') $Cyan  no-repeat center;
+            max-height: 300px;
+            height: 300px;
+            background-size: cover;
+            opacity: 1 !important;
+            .hoverimg {
+                width: 100%;
+                max-height: 300px;
+                height: 300px;
+                &:hover {
+                    background-color: rgba($color: $Cyan, $alpha: 0.5);
+                    background-image: url("../images/icon-view.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        h2 {
+            color: $White;
+            margin-bottom: 22px;
+            &:hover {
+                color: $Cyan;
+                cursor: pointer;
+            }
+        }
+        .dic {
+            margin-bottom: 22px;
+        }
+        .priceandtime {
+            margin-bottom: 18px;
+            .price {
+                color: $Cyan;
+                // line-height: 100px;
+                text-align: center;
+            }
+            display: flex;
+            align-content: center;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+        }
+        hr {
+            margin-bottom: 18px;
+            background-color: $Verydarkblueline;
+        }
+        .footer {
+            display: flex;
+            align-content: centers;
+            img {
+                height: 32px;
+                border-radius: 50%;
+                border: 1px solid white;
+                margin-right: 18px;
+            }
+            .name {
+                color: $White;
+                &:hover {
+                    color: $Cyan;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
